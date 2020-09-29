@@ -4,6 +4,7 @@ import static seedu.address.logic.parser.CliSyntax.PREFIX_REMARK;
 import static seedu.address.logic.parser.CommandParserTestUtil.assertParseFailure;
 import static seedu.address.logic.parser.CommandParserTestUtil.assertParseSuccess;
 import static seedu.address.testutil.TypicalIndexes.INDEX_FIRST_PERSON;
+
 import org.junit.jupiter.api.Test;
 
 import seedu.address.commons.core.index.Index;
@@ -24,15 +25,15 @@ public class RemarkCommandParserTest {
         // no remark
         userInput = targetIndex.getOneBased() + " " + PREFIX_REMARK;
         expectedCommand = new RemarkCommand(INDEX_FIRST_PERSON, new Remark(""));
-        assertParseSuccess((Parser)parser, userInput, expectedCommand);
+        assertParseSuccess((Parser) parser, userInput, expectedCommand);
     }
 
     @Test
     public void parse_missingCompulsoryField_failure() {
         String expectedMessage = String.format(MESSAGE_INVALID_COMMAND_FORMAT, RemarkCommand.MESSAGE_USAGE);
         // no parameters
-        assertParseFailure((Parser)parser, RemarkCommand.COMMAND_WORD, expectedMessage);
+        assertParseFailure((Parser) parser, RemarkCommand.COMMAND_WORD, expectedMessage);
         // no index
-        assertParseFailure((Parser)parser, RemarkCommand.COMMAND_WORD + " " + nonEmptyRemark, expectedMessage);
+        assertParseFailure((Parser) parser, RemarkCommand.COMMAND_WORD + " " + nonEmptyRemark, expectedMessage);
     }
 }
