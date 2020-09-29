@@ -78,3 +78,4 @@ public class PersonCard extends UiPart<Region> {
                 && person.equals(card.person);
     }
 }
+
