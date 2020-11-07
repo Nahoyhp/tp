@@ -163,10 +163,10 @@ Examples:
     
     Absolute Path: Path that contains root element,
         e.g. C:/Users/user_name/Desktop/FILE_NAME.json
+   
     Relative Path: Path will take reference from the file that contains Calo.jar.
-        For example, if Calo is inside the C:/Users/UserName/App 
-        and the user entered data/archived_file.json as the destination, the archived file will be
-        inside C:/Users/UserName/App/data folder and has name "archived_file" 
+        For example, if Calo is inside the C:/Users/UserName/App and the user entered data/archived_file.json as the destination,
+        the archived file will be inside C:/Users/UserName/App/data folder and has name "archived_file" 
 </div>
 
 ## 3.11. Recall : `recall`
