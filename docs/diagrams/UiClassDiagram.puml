@@ -11,8 +11,10 @@ Class UiManager
 Class MainWindow
 Class HelpWindow
 Class ResultDisplay
-Class PersonListPanel
-Class PersonCard
+Class ExerciseListPanel
+Class ExerciseCard
+Class TemplateListPanel
+Class TemplateCard
 Class StatusBarFooter
 Class CommandBox
 Class CaloriesGraph
@@ -34,28 +36,32 @@ UiManager -down-> MainWindow
 MainWindow --> HelpWindow
 MainWindow *-down-> CommandBox
 MainWindow *-down-> ResultDisplay
-MainWindow *-down-> PersonListPanel
+MainWindow *-down-> ExerciseListPanel
+MainWindow *-down-> TemplateListPanel
 MainWindow *-down-> StatusBarFooter
 MainWindow *-down-> CaloriesGraph
 
-PersonListPanel -down-> PersonCard
+ExerciseListPanel -down-> ExerciseCard
+TemplateListPanel -down-> TemplateCard
 
 MainWindow -left-|> UiPart
 
 ResultDisplay --|> UiPart
 CommandBox --|> UiPart
-PersonListPanel --|> UiPart
-PersonCard --|> UiPart
+ExerciseListPanel --|> UiPart
+ExerciseCard --|> UiPart
+TemplateListPanel --|> UiPart
+TemplateCard --|> UiPart
 StatusBarFooter --|> UiPart
 HelpWindow -down-|> UiPart
 
 
 CaloriesGraph ..> Model
-PersonCard ..> Model
+ExerciseCard ..> Model
 UiManager -right-> Logic
 MainWindow -left-> Logic
 
-PersonListPanel -[hidden]left- HelpWindow
+ExerciseListPanel -[hidden]left- HelpWindow
 HelpWindow -[hidden]left- CommandBox
 CommandBox -[hidden]left- ResultDisplay
 ResultDisplay -[hidden]left- StatusBarFooter

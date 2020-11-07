@@ -19,6 +19,6 @@ StorageManagerForExercise o--> ExerciseBookStorage
 JsonUserPrefsStorage .left.|> UserPrefsStorage
 JsonExerciseBookStorage .left.|> ExerciseBookStorage
 JsonExerciseBookStorage .down.> JsonSerializableExerciseBookStorage
-JsonSerializableExerciseBookStorage .right.> JsonSerializablePerson
-JsonSerializablePerson .right.> JsonAdaptedTag
+JsonSerializableExerciseBookStorage .right.> JsonSerializableExercise
+JsonSerializableExercise .right.> JsonAdaptedTag
 @enduml
