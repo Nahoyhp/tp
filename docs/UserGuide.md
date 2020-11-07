@@ -154,16 +154,19 @@ The file name must ends with the extension `.json`
 
 Examples:  
 - `archive f/data/file_name.json`  
-- `archive f/C:\Users\user_name\Desktop\FILE_NAME.json`  
+- `archive f/C:/Users/user_name/Desktop/FILE_NAME.json`  
 
 
 
 <div markdown="block" class="alert alert-info">
+    <b>:information_source: Notes about the command format:</b>
     
-    <b> Absolute Path </b>: Path that contains root element, e.g. C:\Users\user_name\Desktop\FILE_NAME.json<br>
-    <b> Relative Path </b>: Path will take reference from the file that contains <b>Calo.jar</b> For example, if Calo is inside
-    the <mark>C:\Users\UserName\App</mark> and the user entered <mark>data\archived_file.json</mark> as the destination, the archived file will be
-    at <mark>C:\Users\UserName\App\data\archived_file.json</mark>  
+    Absolute Path: Path that contains root element,
+        e.g. C:/Users/user_name/Desktop/FILE_NAME.json
+    Relative Path: Path will take reference from the file that contains Calo.jar.
+        For example, if Calo is inside the C:/Users/UserName/App 
+        and the user entered data/archived_file.json as the destination, the archived file will be
+        inside C:/Users/UserName/App/data folder and has name "archived_file" 
 </div>
 
 ## 3.11. Recall : `recall`
