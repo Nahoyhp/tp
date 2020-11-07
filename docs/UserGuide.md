@@ -147,17 +147,19 @@ The application will save the data automatically to the default file path after 
 ## 3.10. Archive : `archive`
 Archive the data into a different file location.
 
-Format: `archive f/FILE_LOCATION\FILE_NAME.json`  
+Format: `archive f/FILE_LOCATION/FILE_NAME.json`  
 The format of the file location accept both Absolute and Relative Path.  
 The file name must ends with the extension `.json`   
 
 
 Examples:  
-- `archive f/data\file_name.json`  
+- `archive f/data/file_name.json`  
 - `archive f/C:\Users\user_name\Desktop\FILE_NAME.json`  
 
 
+
 <div markdown="block" class="alert alert-info">
+    
     <b> Absolute Path </b>: Path that contains root element, e.g. C:\Users\user_name\Desktop\FILE_NAME.json<br>
     <b> Relative Path </b>: Path will take reference from the file that contains <b>Calo.jar</b> For example, if Calo is inside
     the <mark>C:\Users\UserName\App</mark> and the user entered <mark>data\archived_file.json</mark> as the destination, the archived file will be
